@@ -1,0 +1,10 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.node.json",
+  "include": ["index.ts", "utils/**/*"],
+  "compilerOptions": {
+    "strict": false,
+    "resolveJsonModule": true,
+    // Check to remove later
+    "ignoreDeprecations": "5.0"
+  }
+}
