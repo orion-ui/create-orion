@@ -2,11 +2,9 @@
 Scaffold a new Vue 3 / TS project with pre-installed Orion UI 
 
 
-## config
-- prefix
-- use monkeyPatching, components ?
-- language
-- import styles css or less
-- use SetupService philosophy ?
-
-- make orion independant cli
+## todo
+- [ ] add prefix configuration
+- [ ] add language configuration
+- [ ] use monkeyPatching &| components
+- [ ] import styles via css or via less
+- [ ] use SetupService philosophy ?
