@@ -119,6 +119,7 @@ export default class OrionCreate {
     log.message([
       `cd ${this.projectFolder}`,
       `npm install`,
+      `npm run dev`,
     ].map(x => pc.green(x)).join('\n'));
   }
 }

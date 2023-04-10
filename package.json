@@ -1,6 +1,5 @@
 {
   "name": "@orion.ui/create-orion",
-  "version": "0.1.0-alpha.4",
   "description": "An easy way to start a Vue 3 / TS project with pre-installed Orion UI",
   "bin": {
     "create-orion": "outfile.cjs"
