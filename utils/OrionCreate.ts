@@ -83,7 +83,7 @@ export default class OrionCreate {
   private async copyTemplateFiles () {
     await this.useSpinner(
       `Copying template files`,
-      () => fs.copy(`${__dirname}/template`, this.projectPath),
+      () => fs.copy(`${__dirname}/__template__`, this.projectPath),
       `Following template files have been copied`
     )
 
