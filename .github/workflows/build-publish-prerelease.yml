@@ -29,6 +29,9 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org
 
+      - name: Build lib
+        run: npm run build
+
       - name: Bump version
         run: npm version "$(BRANCH=${GITHUB_REF_NAME} node scripts/npm-version.cjs)" --no-git-tag-version
 
