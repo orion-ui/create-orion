@@ -83,7 +83,10 @@ export default class OrionCreate {
   private async copyTemplateFiles () {
     await this.useSpinner(
       `Copying template files`,
-      () => fs.copy(`${__dirname}/__template__`, this.projectPath),
+      async () => {
+        await fs.copy(`${__dirname}/__template__`, this.projectPath);
+        await this.createGitIgnoreFile();
+      },
       `Following template files have been copied`
     )
 
@@ -103,6 +106,11 @@ export default class OrionCreate {
 
     readdirRecursive();
     log.message(files.map(x => pc.blue(x)).join('\n'));
+  }
+
+  private async createGitIgnoreFile () {
+    const gitIgnoreTemplate = await fs.readFile(`${__dirname}/template/gitignore.txt`, { encoding: 'utf-8' });
+    await fs.writeFile(`${this.projectPath}/.gitignore`, gitIgnoreTemplate);
   }
 
   private async displayNextSteps () {
