@@ -7,7 +7,8 @@
   },
   "files": [
     "outfile.cjs",
-    "template"
+    "template",
+    "__template__"
   ],
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
